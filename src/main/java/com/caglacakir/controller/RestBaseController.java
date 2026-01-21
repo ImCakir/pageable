@@ -3,6 +3,7 @@ package com.caglacakir.controller;
 import com.caglacakir.utils.PagerUtil;
 import com.caglacakir.utils.RestPageableEntity;
 import com.caglacakir.utils.RestPageableRequest;
+import com.caglacakir.utils.RestRootEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -22,7 +23,11 @@ public class RestBaseController {
     public <T> RestPageableEntity<T> toPageableResponse(Page<?> page , List<T> content) {
         return PagerUtil.toPageableResponse(page , content);
 
+    }
 
+    public <T> RestRootEntity<T> ok(T payload) {
+        return RestRootEntity.ok(payload);
 
     }
+
 }

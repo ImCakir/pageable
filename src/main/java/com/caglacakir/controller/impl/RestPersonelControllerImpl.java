@@ -8,6 +8,7 @@ import com.caglacakir.model.Personel;
 import com.caglacakir.service.IPersonelService;
 import com.caglacakir.utils.RestPageableEntity;
 import com.caglacakir.utils.RestPageableRequest;
+import com.caglacakir.utils.RestRootEntity;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -32,11 +33,15 @@ public class RestPersonelControllerImpl extends RestBaseController implements IR
 
     @GetMapping("/list/pageable")
     @Override
-    public RestPageableEntity<DtoPersonel> findAllPageable(RestPageableRequest pageable){
+    public RestRootEntity<RestPageableEntity<DtoPersonel>> findAllPageable(RestPageableRequest pageable){
         Page<Personel> page = personelService.findAllPageable(toPageable(pageable));
         RestPageableEntity<DtoPersonel> pageableResponse = toPageableResponse(page, personelService.toDTOList(page.getContent()));
 
-        return pageableResponse;
+        return ok(pageableResponse); //ok metodu RestRootEntity<T> doner.T yerine --> pageableResponse verdik
+        //  pageableResponse türü de  --> RestPageableEntity<DtoPersonel> tipindedir
+        // biz T gördüğümüz yere RestPageableEntity<DtoPersonel> bunu yazıcaz.Sonuc olarak;
+        // RestRootEntity<RestPageableEntity<DtoPersonel>> boyle olmuş olcak
+
     }
 
 
