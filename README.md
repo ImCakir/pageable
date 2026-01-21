@@ -12,12 +12,12 @@ The goal is to write clean, reusable, and understandable backend code.
 
 ---
 
-🧠 Main Idea (In Simple Words)
+🧠 Main Idea 
 
 - Instead of writing pagination code again and again in every controller:
-•	Pagination logic is written once
-•	Controllers reuse this logic
-•	Responses always have the same format
+1.	Pagination logic is written once
+2.	Controllers reuse this logic
+3.  Responses always have the same format
 
 ---
 
@@ -77,8 +77,8 @@ asc         → ascending / descending
 Utility class that creates a Pageable object.
 
 - What it does:
-•	Adds sorting only if columnName is provided
-•	Supports ASC / DESC sorting
+1.	Adds sorting only if columnName is provided
+2.	Supports ASC / DESC sorting
 
 ---
 
@@ -87,8 +87,8 @@ Utility class that creates a Pageable object.
 Parent controller class.
 
 - Why it exists:
-•	Avoid code duplication
-•	Share pagination & response logic
+1.	Avoid code duplication
+2.	Share pagination & response logic
 
 public Pageable toPageable(RestPageableRequest request)
 
@@ -110,8 +110,8 @@ public Pageable toPageable(RestPageableRequest request)
 Entities are not sent directly to the client.
 
 Instead:
-•	Entity → DTO
-•	Safer and cleaner API
+1.	Entity → DTO
+2.	Safer and cleaner API
 
 ---
 
