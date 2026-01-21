@@ -93,10 +93,11 @@ public Pageable toPageable(RestPageableRequest request)
 
 4️⃣ Page vs Pageable
 
-Pageable	Page
-Request info	Result data
-page number	content list
-page size	total elements
+| pageable   | page |
+| --- | --- |
+| request info  | result data |
+| page number | content list |
+| page size   |   total elements |
 
 
 ⸻
