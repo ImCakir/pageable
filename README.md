@@ -3,10 +3,10 @@ Pageable Project
 📌 What is this project?
 
 - This project is a Spring Boot REST API example that shows how to:
-•	Use pagination with Spring Data JPA
-•	Centralize pagination and sorting logic
-•	Convert Entity objects to DTOs
-•	Return a standard API response structure
+1.	Use pagination with Spring Data JPA
+2.	Centralize pagination and sorting logic
+3.  Convert Entity objects to DTOs
+4.	Return a standard API response structure
 
 The goal is to write clean, reusable, and understandable backend code.
 
@@ -120,10 +120,10 @@ Instead:
 Standard pagination response model.
 
 Contains:
-•	content (DTO list)
-•	pageNumber
-•	pageSize
-•	totalElements
+1.	content (DTO list)
+2.	pageNumber
+3.	pageSize
+4.	totalElements
 
 ---
 
@@ -131,9 +131,11 @@ Contains:
 
 Wraps every API response.
 
+```json
 status       → HTTP status code
 payload      → actual data
 errorMessage → message info
+```
 
 ---
 
@@ -155,24 +157,24 @@ errorMessage → message info
 ---
 
 🎯 Why This Project is Important
-•	Shows real backend pagination usage
-•	Uses clean architecture
-•	Easy to extend
-•	Suitable for CV & interviews
+1.	Shows real backend pagination usage
+2.	Uses clean architecture
+3.	Easy to extend
+4.	Suitable for CV & interviews
 
 ---
 
 🚀 Technologies Used
-•	Java
-•	Spring Boot
-•	Spring Data JPA
-•	Lombok
+1.	Java
+2.	Spring Boot
+3.	Spring Data JPA
+4.	Lombok
 
 ---
 
 📌 Summary
 
 This project focuses on how pagination should be designed properly in a backend application:
-•	Clean
-•	Reusable
-•	Understandable
+1.	Clean
+2.	Reusable
+3.	Understandable
